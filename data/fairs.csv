@@ -1,0 +1,48 @@
+id,name,ware,pref,city,region,rule_type,rule_a,rule_b,rule_offset,rule_days,rule_note,rule_status,official_url,hashigo,note,source
+t001,有田陶器市,有田焼,佐賀,有田町,九州・沖縄,fixed,04-29,05-05,,,毎年4月29日〜5月5日,確認済,https://www.arita-toukiichi.or.jp/,肥前,例年約100万人が来場。ネット販売の「Web有田陶器市」も同じ時期に開催,https://www.toretabi.jp/event/entry-25152.html
+t002,秋の有田陶磁器まつり,有田焼,佐賀,有田町,九州・沖縄,month,11,下旬,,,11月下旬の5日間（勤労感謝の日のころ）,推定,https://www.arita.jp/,肥前,薪窯めぐりや紅葉と合わせて町を歩く催し,https://www.toretabi.jp/event/entry-23335.html
+t003,波佐見陶器まつり,波佐見焼,長崎,波佐見町,九州・沖縄,fixed,04-29,05-05,,,ゴールデンウィーク（2026年は4月29日〜5月5日）,推定,,肥前,メイン会場はやきもの公園。約150店,https://www.fukuoka-now.com/en/event/hasami-ceramic-festival-26/
+t004,唐津やきもん祭り,唐津焼,佐賀,唐津市,九州・沖縄,fixed,04-29,05-05,,,4月29日〜5月5日（2026年の日程から）,推定,https://karatsu-yakimon.com/,肥前,唐津駅近くの中心市街地。陶芸家の展示販売や料理店との企画,https://www.iwafu.com/jp/events/1061910
+t005,三川内焼 はまぜん祭り,三川内焼,長崎,佐世保市,九州・沖縄,fixed,05-01,05-05,,,毎年5月1日〜5日,確認済,,肥前,三川内皿山の窯元めぐり。三河内駅から無料シャトルバス,https://www.pref.nagasaki.jp/shared/uploads/2024/03/1709795572.pdf
+t006,伊万里・鍋島藩窯秋まつり,伊万里焼・鍋島焼,佐賀,伊万里市,九州・沖縄,month,11,上旬,,,11月1日〜5日（2018年の日程から）,推定,https://imari-ookawachiyama.com/,肥前,大川内山の窯元市,https://www.nikkan.co.jp/releases/view/77398
+t007,益子春の陶器市,益子焼,栃木,益子町,関東,fixed,04-29,05-05,,,ゴールデンウィーク（2026年は4月29日〜5月6日）,推定,,益子・笠間,販売店約50とテント約600〜700,https://tabi-mag.jp/mashikotouki-spring/
+t008,益子秋の陶器市,益子焼,栃木,益子町,関東,month,11,上旬,,,例年11月3日前後,推定,,益子・笠間,,https://media.jreast.co.jp/articles/1087
+t009,笠間の陶炎祭（ひまつり）,笠間焼,茨城,笠間市,関東,fixed,04-29,05-05,,,毎年4月29日〜5月5日,確認済,https://www.himatsuri.net/,益子・笠間,入場料500円・18歳以下無料（2026年）。200軒以上が出店,https://www.toretabi.jp/event/entry-25092.html
+t010,笠間焼 彩初窯市,笠間焼,茨城,笠間市,関東,fixed,01-02,01-05,,,正月恒例（2026年は1月2日〜5日）,推定,,,笠間工芸の丘。60人以上の作家がテントを出す,https://tabi-mag.jp/kasama-irodori/
+t011,立川陶器市（秋）,各地の作家,東京,立川市,関東,month,11,下旬,,,11月下旬から（2026年は11月27日開始）,推定,https://greensprings.jp/,,会場は GREEN SPRINGS,https://bestcalendar.jp/press/162220
+t012,全国大陶器市（千葉・青葉の森公園会場）,全国の産地,千葉,千葉市,関東,month,11,下旬,,,11月下旬〜12月上旬（2025年は11月29日〜12月7日）,推定,,,全国大陶器市振興組合が各地を回る巡回型,https://iko-yo.net/events/534531
+t013,土岐美濃焼まつり,美濃焼,岐阜,土岐市,東海,fixed,05-03,05-05,,,毎年5月3日〜5日,確認済,https://toki-kankou.jp/,美濃・瀬戸,日本三大陶器まつりのひとつ。会場は織部ヒルズ,https://tabi-mag.jp/potteryfestival-big3/
+t014,たじみ陶器まつり,美濃焼,岐阜,多治見市,東海,nth,4-2-6,,,2,4月第2土日（2019年の日程から）,推定,,美濃・瀬戸,本町オリベストリート一帯,https://intojapanwaraku.com/travel/2573/
+t015,土岐市 春の美濃焼大陶器市,美濃焼,岐阜,土岐市,東海,month,4,中旬,,,4月中旬の土日（2026年は4月18日・19日）,推定,,美濃・瀬戸,イオンモール土岐の駐車場,https://rurubu.jp/andmore/spot/20001600
+t016,つながる秋の陶器まつり うつわさがし,美濃焼,岐阜,土岐市,東海,nth,10-4-6,,,2,10月第4土日（2024年・2026年の日程から）,推定,,美濃・瀬戸,市内5会場と無料巡回バス（2026年）,https://www.haveagood-holiday.com/en/articles/utsuwa-sagashi-toki-mino-ware-autumn-pottery-festival-2026
+t017,せともの祭,瀬戸焼,愛知,瀬戸市,東海,nth,9-2-6,,,2,9月第2土日（2025年・2026年の日程から）,推定,,美濃・瀬戸,日本三大陶器まつりのひとつ。瀬戸川沿いに約200軒,https://tabi-mag.jp/potteryfestival-big3/
+t018,せと陶祖まつり,瀬戸焼,愛知,瀬戸市,東海,nth,4-3-6,,,2,4月第3土日（2025年・2026年の日程から）,推定,,美濃・瀬戸,尾張瀬戸駅周辺。陶磁器の廉売市,https://aichinow.pref.aichi.jp/spots/detail/1190
+t019,常滑焼まつり,常滑焼,愛知,常滑市,東海,nth,10-1-6,,,2,10月第1土日（2025年・2026年の日程から）,推定,https://www.tokoname-kankou.net/,,ボートレースとこなめ・やきもの散歩道・セラモールの3会場,https://aichinow.pref.aichi.jp/spots/detail/82/
+t020,四日市ばんこ焼 陶器まつり,萬古焼,三重,四日市市,東海,month,5,中旬,,,5月中旬の土日（2026年は5月16日・17日）,推定,,,メイン会場は四日市ドーム。50社以上が出店,https://www.kankomie.or.jp/topic/1232
+t021,伊賀焼陶器まつり,伊賀焼,三重,伊賀市,東海,nth,9-3-1,,-2,3,9月の敬老の日の3連休（2026年の日程から）,推定,https://igayakimatsuri.com/,,あやまふれあい公園「すぱーく阿山」,https://www.kankomie.or.jp/event/16810
+t022,九谷茶碗まつり,九谷焼,石川,能美市,北陸・甲信越,fixed,05-03,05-05,,,5月3日〜5日（2019年の日程から）,推定,,,九谷陶芸村に特設店が並ぶ,https://intojapanwaraku.com/travel/2573/
+t023,越前陶芸まつり,越前焼,福井,越前町,北陸・甲信越,month,5,下旬,,,5月末の土日（2026年は5月30日・31日）,推定,,,越前陶芸村。福井県内の窯元が集まる,https://fuku-iro.jp/event/detail_11457.html
+t024,しがらき駅前陶器市（春）,信楽焼,滋賀,甲賀市,近畿,fixed,04-29,05-05,,,ゴールデンウィーク（2026年は4月29日〜5月6日）,推定,,信楽,信楽駅前広場,https://www.iwafu.com/jp/events/1057615
+t025,信楽作家市,信楽焼ほか,滋賀,甲賀市,近畿,fixed,05-02,05-05,,,5月2日〜5日（2024年・2026年の日程から）,推定,https://www.sccp.jp/,信楽,滋賀県立陶芸の森。150人以上の作家が出店,https://www.iwafu.com/tw/events/1048248
+t026,信楽陶器まつり,信楽焼,滋賀,甲賀市,近畿,month,10,中旬,,,10月中旬の約1週間（2024年は10月12日〜20日）,推定,,,,https://www.sccp.jp/wp-content/uploads/2024/04/tougeinomori-nenkanschedule-2024.pdf
+t027,丹波焼陶器まつり 秋の郷めぐり,丹波焼,兵庫,丹波篠山市,近畿,month,10,中旬,,,10月中旬の約10日間（2026年は10月9日〜18日）,推定,https://tanbayaki.com/,,約50軒の窯元めぐり。土日祝は陶の郷でうつわ市,https://www.iwafu.com/jp/events/1161253
+t028,五条若宮陶器祭（五条坂）,京焼・清水焼,京都,京都市,近畿,fixed,08-07,08-10,,,8月7日〜10日（2026年の日程から）,推定,,,2024年に復活。五条通と若宮八幡宮に130以上が出店,https://ja.kyoto.travel/event/single.php?event_id=3407
+t029,KYOPO（旧 清水焼の郷まつり）,京焼・清水焼,京都,京都市,近畿,nth,10-3-5,,,3,10月第3金・土・日（2025年・2026年の日程から）,推定,https://kyopo.jp/,,山科の清水焼団地一帯。2026年に名称変更,https://ja.kyoto.travel/event/single.php?event_id=3645
+t030,備前焼まつり,備前焼,岡山,備前市,中国・四国,nth,10-3-0,,-1,2,毎年10月第3日曜とその前日の土曜,確認済,https://touyuukai.jp/,,JR伊部駅周辺。陶友会会員の商品が2割引,https://www.okayama-kanko.jp/spot/detail_16490.html
+t031,春の備前焼まつり,備前焼,岡山,備前市,中国・四国,month,5,上旬,,,2026年に第1回（5月3日・4日）。次回の日程は未発表,未確認,,,,https://www.okayama-kanko.jp/event/detail_16162.html
+t032,萩焼まつり,萩焼,山口,萩市,中国・四国,fixed,05-01,05-05,,,毎年5月1日〜5日,確認済,,,萩・明倫学舎と萩市民館の特設会場、市内の協賛店,https://tabi-mag.jp/hagiyakifes/
+t033,砥部焼まつり（春）,砥部焼,愛媛,砥部町,中国・四国,nth,4-3-6,,,2,4月第3土日（2025年・2026年の日程から）,推定,,,砥部町陶街道ゆとり公園。約10万点の即売会,https://rurubu.jp/andmore/spot/20001611
+t034,秋の砥部焼まつり,砥部焼,愛媛,砥部町,中国・四国,nth,11-1-6,,,2,11月第1土日（2025年の日程から）,推定,,,窯元の対面販売,https://www.toretabi.jp/event/entry-23155.html
+t035,大谷焼窯まつり,大谷焼,徳島,鳴門市,中国・四国,nth,11-2-6,,,2,11月第2土日（2026年の日程から）,推定,,,大谷焼の里の各窯元,https://rurubu.jp/andmore/spot/20000594
+t036,小石原 春の民陶むら祭,小石原焼・髙取焼,福岡,東峰村,九州・沖縄,fixed,05-03,05-05,,,5月3日〜5日（2026年の日程から）,推定,https://toho-info.com/,小石原・小鹿田,約40の窯元が2割引で販売,https://www.crossroadfukuoka.jp/event/13918
+t037,小石原 秋の民陶むら祭,小石原焼・髙取焼,福岡,東峰村,九州・沖縄,nth,10-2-1,,-2,3,10月のスポーツの日の3連休（2025年の日程から）,推定,https://toho-info.com/,小石原・小鹿田,,https://www.crossroadfukuoka.jp/event/13730
+t038,小鹿田焼民陶祭,小鹿田焼,大分,日田市,九州・沖縄,nth,10-2-6,,,2,10月第2土日（2025年の日程から）,推定,,小石原・小鹿田,9軒の窯元の軒先に並ぶ,https://tabi-mag.jp/ontayakifes/
+t039,上野焼 春の陶器まつり,上野焼,福岡,福智町,九州・沖縄,month,4,下旬,,,4月下旬（2019年は4月26日〜29日）,推定,,,,https://data-max.co.jp/article/29021
+t040,美山CRAFT WEEK,薩摩焼,鹿児島,日置市,九州・沖縄,month,11,上旬,,,10月末〜11月3日ごろ（2025年は10月30日〜11月3日）,推定,,,薩摩焼の里・美山一帯,https://rurubu.jp/andmore/spot/20000238
+t041,壺屋陶器まつり,壺屋焼,沖縄,那覇市,九州・沖縄,month,11,下旬,,,11月下旬の3日間（2025年は11月21日〜23日）,推定,https://tuboya.com/,,会場は壺屋小学校,https://rurubu.jp/andmore/spot/20000642
+t042,読谷山焼陶器市,やちむん,沖縄,読谷村,九州・沖縄,nth,12-3-5,,,3,例年12月第3金・土・日,推定,https://www.tabi-yachimun.jp/,,やちむんの里。各工房が2〜3割引で販売,https://www.ana.co.jp/ja/jp/japan-travel-planner/okinawa/0000024.html
+t043,読谷やちむん市,やちむん,沖縄,読谷村,九州・沖縄,month,2,下旬,,,2月下旬の土日（2026年は2月21日・22日）,推定,,,JAファーマーズ ゆんた市場,https://www.okinawatraveler.net/feature/0046_sp
+t044,会津本郷焼せと市,会津本郷焼,福島,会津美里町,北海道・東北,month,6,中旬,,,6月の日曜（2026年は6月14日）。早朝4時〜正午,推定,https://aizuhongouyaki.jp/,,窯元主催の朝市,https://tabi-mag.jp/aizuhongo-setoichi/
+t045,えべつやきもの市,各地の作家,北海道,江別市,北海道・東北,nth,7-2-6,,,2,毎年7月第2土日,確認済,https://ebetsu-yakimono.com/,,江別市役所前。道内の作家など約250店,https://tabi-mag.jp/ebetsu-yakimonofes/
+t046,三川内陶器市,三川内焼,長崎,佐世保市,九州・沖縄,month,11,下旬,,,11月下旬の4日間（2026年は11月20日〜23日）,推定,,肥前,三川内皿山。伝統産業会館からシャトルバス,https://rurubu.jp/andmore/spot/20000215
+t047,春KYOPO 器と食のマーケット,全国の作家,京都,京都市,近畿,month,3,中旬,,,2027年3月に初開催,推定,https://kyopo.jp/,,岡崎公園。入場無料,https://www.oricon.co.jp/pressrelease/3033279/

@@ -1,0 +1,13 @@
+{
+  "name": "hashigo-touki",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "まわせ！はしご陶器市 — 全国の陶器市の日程と、同じ時期に回れる組み合わせ",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/test-schedule.mjs",
+    "serve": "npx --yes http-server public -p 8080 -c-1"
+  },
+  "engines": { "node": ">=20" }
+}
