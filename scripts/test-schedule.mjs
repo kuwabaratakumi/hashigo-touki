@@ -2,7 +2,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import { nthWeekday, occurrence, nextOccurrence, lastHeld, monthsOf, overlapSets } from '../public/schedule.js';
-import { enrich, viewCalendar, viewRegion, viewHashigo, monthStrip, regionChips } from '../public/views.js';
+import { enrich, viewCalendar, viewRegion, viewHashigo, monthStrip, regionChips, setFavs } from '../public/views.js';
 
 // 第n◇曜
 assert.equal(nthWeekday(2026, 11, 2, 6), 14);            // 2026年11月 第2土曜
@@ -48,5 +48,16 @@ try {
     }
   }
   console.log(`実データ ${d.fairs.length}件で全画面の描画OK`);
+
+  // お気に入り：ハートが押された状態で描かれるのは登録した1件だけ
+  const items = enrich(d.fairs, '2026-11-14'), st = { region: 'すべて', month: '' };
+  setFavs(new Set([d.fairs[0].id]));
+  const on = (viewCalendar(items, '2026-11-14', st).match(/class="fav" data-fav="[^"]+" aria-pressed="true"/g) || []).length;
+  assert.equal(on, 1);
+  setFavs(new Set());
+  assert.equal((viewCalendar(items, '2026-11-14', st).match(/class="fav" data-fav="[^"]+" aria-pressed="true"/g) || []).length, 0);
+  // 絞り込んで0件になった地方でも、選択中のチップは消えない
+  assert.ok(regionChips([], d.regions, d.regions[0]).includes(`data-region="${d.regions[0]}"`));
+  console.log('お気に入り・地方チップのテスト OK');
 } catch (e) { if (e.code !== 'ENOENT') throw e; console.log('public/data がないので描画テストは省略（先に npm run build）'); }
 console.log('開催日の計算テスト OK');

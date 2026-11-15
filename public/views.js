@@ -8,6 +8,10 @@ const mdw = (iso) => `${md(iso)}（${DOW[new Date(iso + 'T12:00:00Z').getUTCDay(
 const range = (s, e) => (e ? (e === s ? mdw(s) : `${mdw(s)}〜${mdw(e)}`) : `${mdw(s)}〜`);
 const gmaps = (q) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
 const gsearch = (q) => `https://www.google.com/search?q=${encodeURIComponent(q)}`;
+const HEART = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.6-4.7-9.5-9.4C1.1 7.7 3.2 4 6.8 4c2 0 3.5 1 5.2 3 1.7-2 3.2-3 5.2-3 3.6 0 5.7 3.7 4.3 7.1C19.6 15.8 12 20.5 12 20.5z"/></svg>';
+let favs = new Set();
+/** お気に入りの id 集合を渡す（カードのハート表示用） */
+export const setFavs = (set) => { favs = set; };
 const STATE_LABEL = { now: '開催中', confirmed: '日程発表済', expected: '例年どおりなら', month: '時期のみ', unknown: '時期不明' };
 
 /** 一覧に「次の開催」「前回」を足す */
@@ -38,6 +42,7 @@ export function card(x, today) {
     : `<a class="btn btn--ghost" href="${esc(gsearch(f.name + ' 公式'))}" target="_blank" rel="noopener">公式をさがす</a>`;
   const src = n.source || f.source;
   return `<article class="card" data-state="${state}">
+    <button type="button" class="fav" data-fav="${esc(f.id)}" aria-pressed="${favs.has(f.id)}" aria-label="${esc(f.name)}をお気に入りにする">${HEART}</button>
     <div class="card__head">
       <p class="card__when">${esc(whenText(n))}</p>
       <h3 class="card__name">${esc(f.name)}</h3>
@@ -78,7 +83,7 @@ export function monthStrip(items, today, selected) {
 
 export function regionChips(items, regions, region) {
   const count = (r) => items.filter((x) => x.fair.region === r).length;
-  return ['すべて', ...regions.filter(count)].map((r) => `<button type="button" class="chip" data-region="${esc(r)}" aria-pressed="${r === region}">${esc(r)}${r === 'すべて' ? '' : `<span class="chip__n">${count(r)}</span>`}</button>`).join('');
+  return ['すべて', ...regions.filter((r) => count(r) || r === region)].map((r) => `<button type="button" class="chip" data-region="${esc(r)}" aria-pressed="${r === region}">${esc(r)}${r === 'すべて' ? '' : `<span class="chip__n">${count(r)}</span>`}</button>`).join('');
 }
 
 /* ---------- 日程順 ---------- */

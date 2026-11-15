@@ -13,6 +13,7 @@
   --amber-bg: #fff1dc;
   --amber-ink: #8a4b00;
   --grey-bg: #edebe6;
+  --fav: #d1344f;          /* お気に入りのハート */
   --num: "Barlow Condensed", "Zen Kaku Gothic New", sans-serif;
   --jp: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
   color-scheme: light;
@@ -35,7 +36,16 @@ a { color: inherit; }
 .top__inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 12px; }
 .brand { margin: 0; font-size: 22px; font-weight: 900; letter-spacing: .04em; display: inline-flex; align-items: center; gap: .4em; color: #fff; }
 .brand__icon { width: 1.25em; height: 1.25em; flex: none; color: #7fa8ec; }
-.top__sub { margin: 0; font-size: 13px; color: #c9ced6; }
+.top__sub { margin: 0; margin-right: auto; padding-left: 4px; font-size: 13px; color: #c9ced6; }
+.favbtn {
+  flex: none; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; font-size: 13px;
+  border: 1px solid #7a808a; background: transparent; color: #fff; border-radius: 999px; padding: 5px 12px;
+}
+.favbtn svg, .fav svg { fill: none; stroke: currentColor; stroke-linejoin: round; }
+.favbtn svg { width: 16px; height: 16px; stroke-width: 2; }
+.favbtn__n { font-family: var(--num); font-weight: 600; font-size: 15px; line-height: 1; }
+.favbtn[aria-pressed="true"] { background: #fff; color: var(--fav); border-color: #fff; }
+.favbtn[aria-pressed="true"] svg { fill: currentColor; }
 .top :focus-visible { outline-color: #fff; }
 
 .days { display: flex; gap: 4px; padding-top: 6px; padding-bottom: 10px; overflow-x: auto; scrollbar-width: none; }
@@ -55,7 +65,9 @@ a { color: inherit; }
 .view { display: inline-flex; border: 1px solid #fff; border-radius: 999px; overflow: hidden; flex: none; }
 .view button { border: 0; background: #fff; color: var(--ink); padding: 6px 14px; cursor: pointer; font-weight: 500; }
 .view button[aria-pressed="true"] { background: var(--accent); color: #fff; }
-.areas { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; flex: 1 1 0; min-width: 0; }
+.areawrap { flex: 1 1 0; min-width: 0; }
+.areabtn { display: none; }                       /* 広い画面では地方をそのまま並べる */
+.areas { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip {
   flex: none; border: 1px solid #7a808a; background: transparent; color: #fff; border-radius: 999px;
   padding: 4px 12px; cursor: pointer; font-size: 13px; display: inline-flex; gap: 6px; align-items: center;
@@ -79,12 +91,25 @@ a { color: inherit; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
 .card {
   background: var(--surface); border: 1px solid var(--soft-line); border-radius: 14px; padding: 14px 14px 12px;
-  display: flex; flex-direction: column; gap: 8px; border-left: 6px solid var(--soft-line);
+  display: flex; flex-direction: column; gap: 8px; border-left: 6px solid var(--soft-line); position: relative;
 }
 .card[data-state="now"] { border-left-color: var(--moss); }
 .card[data-state="confirmed"] { border-left-color: var(--accent); }
 .card[data-state="expected"] { border-left-color: #e0a44a; }
-.card__head { display: flex; flex-direction: column; gap: 4px; }
+.card__head { display: flex; flex-direction: column; gap: 4px; padding-right: 36px; }
+.fav {
+  position: absolute; top: 6px; right: 6px; width: 40px; height: 40px; display: grid; place-items: center;
+  border: 0; border-radius: 50%; background: transparent; color: #7a808a; cursor: pointer;
+}
+.fav svg { width: 24px; height: 24px; stroke-width: 1.8; }
+.fav:hover { background: var(--grey-bg); color: var(--fav); }
+.fav[aria-pressed="true"] { color: var(--fav); }
+.fav[aria-pressed="true"] svg { fill: currentColor; }
+.favbar {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 12px;
+  margin-bottom: 14px; padding: 8px 12px; font-size: 14px; background: #fdecef; border: 1px solid #f2c4cd; border-radius: 12px;
+}
+.favbar b { color: var(--fav); }
 .card__when { margin: 0; font-family: var(--num); font-size: 19px; font-weight: 600; line-height: 1.2; letter-spacing: .01em; }
 .card__name { margin: 0; font-size: 17px; font-weight: 700; line-height: 1.35; }
 .card__badges { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 2px; }
@@ -134,11 +159,37 @@ a { color: inherit; }
 @media (max-width: 640px) {
   .brand { font-size: 18px; white-space: nowrap; letter-spacing: 0; }
   .top__sub { display: none; }
+  .top__inner { padding-top: 10px; }
+  .favbtn { margin-left: auto; padding: 5px 11px; }
+  .favbtn__t { display: none; }
   .day { flex-basis: 46px; }
   .day__d { font-size: 24px; }
-  .tools { flex-direction: column; align-items: stretch; }
-  .view { align-self: flex-start; }
-  .areas { flex: none; padding-bottom: 2px; }
+
+  /* 表示の切り替えと地方を1行に。地方は押すと下にパネルが開く */
+  .tools { position: relative; flex-wrap: nowrap; gap: 8px; padding-bottom: 10px; }
+  .view { flex: 1 1 auto; min-width: 0; }
+  .view button { flex: 1 1 0; padding: 7px 4px; white-space: nowrap; }
+  .areawrap { flex: none; }
+  .areabtn {
+    display: inline-flex; align-items: center; gap: 6px; max-width: 44vw; cursor: pointer; font-size: 14px;
+    border: 1px solid #7a808a; background: transparent; color: #fff; border-radius: 999px; padding: 6px 12px;
+  }
+  .areabtn__k { font-size: 11px; color: #c9ced6; }
+  .areabtn__v { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .areabtn svg { width: 10px; height: 7px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; transition: transform .15s; }
+  .areabtn[aria-expanded="true"] svg { transform: rotate(180deg); }
+  .areabtn[data-active] { background: #fff; color: var(--ink); border-color: #fff; }
+  .areabtn[data-active] .areabtn__k { color: var(--ink-2); }
+  .areas {
+    display: none; position: absolute; z-index: 20; left: 16px; right: 16px; top: calc(100% - 4px);
+    grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; padding: 12px;
+    background: #fff; color: var(--ink); border-radius: 14px; box-shadow: 0 12px 32px rgba(0, 0, 0, .3);
+  }
+  .areas[data-open] { display: grid; }
+  .areas .chip { width: 100%; justify-content: center; padding: 10px 4px; font-size: 14px; border-color: var(--soft-line); color: var(--ink); }
+  .areas .chip:first-child { grid-column: 1 / -1; }
+  .areas .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+
   .grid { grid-template-columns: 1fr; }
-  .main { scroll-margin-top: 230px; }
+  .main { scroll-margin-top: 190px; }
 }

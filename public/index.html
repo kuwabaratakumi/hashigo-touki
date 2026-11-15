@@ -18,6 +18,10 @@
   <div class="top__inner">
     <h1 class="brand"><svg class="brand__icon" viewBox="0 0 100 100" aria-hidden="true"><defs><mask id="brandMask"><rect width="100" height="100" fill="#fff"/><g fill="#000"><rect x="32" y="0" width="8" height="100"/><rect x="60" y="0" width="8" height="100"/><rect x="40" y="38" width="20" height="8"/><rect x="40" y="60" width="20" height="8"/></g></mask></defs><path d="M4 22 H96 C96 58 78 82 62 84 V94 H38 V84 C22 82 4 58 4 22 Z" fill="currentColor" mask="url(#brandMask)"/></svg>まわせ！はしご陶器市</h1>
     <p class="top__sub">全国の陶器市カレンダー</p>
+    <button type="button" class="favbtn" id="favBtn" data-fav-toggle aria-pressed="false" aria-label="お気に入りだけ表示">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.6-4.7-9.5-9.4C1.1 7.7 3.2 4 6.8 4c2 0 3.5 1 5.2 3 1.7-2 3.2-3 5.2-3 3.6 0 5.7 3.7 4.3 7.1C19.6 15.8 12 20.5 12 20.5z"/></svg>
+      <span class="favbtn__t">お気に入り</span><span class="favbtn__n" id="favCount">0</span>
+    </button>
   </div>
   <nav class="days" id="months" aria-label="月でしぼる"></nav>
   <div class="tools">
@@ -26,7 +30,13 @@
       <button type="button" data-view="region" aria-pressed="false">産地別</button>
       <button type="button" data-view="hashigo" aria-pressed="false">はしご</button>
     </div>
-    <div class="areas" id="regions" role="group" aria-label="地方"></div>
+    <div class="areawrap">
+      <button type="button" class="areabtn" id="areaBtn" data-area-toggle aria-expanded="false" aria-controls="regions">
+        <span class="areabtn__k">地方</span><span class="areabtn__v" id="areaLabel">すべて</span>
+        <svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg>
+      </button>
+      <div class="areas" id="regions" role="group" aria-label="地方"></div>
+    </div>
   </div>
 </header>
 
