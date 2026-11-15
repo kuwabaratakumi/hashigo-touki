@@ -79,12 +79,27 @@ function bind() {
   window.addEventListener('storage', (e) => { if (e.key === 'hashigo-touki:favs') { state.favs = loadFavs(); render(); } });
 }
 
+// スクロールしたら月の帯を畳んで画面を広く使う（行き来でちらつかないよう、畳む位置と戻す位置をずらす）
+function bindCompact() {
+  const top = $('.top');
+  let compact = false;
+  const update = () => {
+    const y = window.scrollY;
+    if (!compact && y > 140) compact = true;
+    else if (compact && y < 40) compact = false;
+    top.classList.toggle('is-compact', compact);
+  };
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+}
+
 async function main() {
   try {
     const d = await fetch(`data/fairs.json?t=${Date.now()}`).then((r) => r.json());
     Object.assign(state, { fairs: d.fairs, groups: d.groups, regions: d.regions });
     $('#builtAt').textContent = `データ更新 ${new Date(d.builtAt).toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo', month: 'numeric', day: 'numeric', hour: 'numeric', minute: '2-digit' })}`;
     bind();
+    bindCompact();
     render();
   } catch (err) {
     $('#main').innerHTML = `<p class="empty">データを読み込めませんでした（${esc(err.message)}）</p>`;
